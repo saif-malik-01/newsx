@@ -1,5 +1,6 @@
 import React from 'react';
 import {Grid,Avatar,Typography,Button} from '@mui/material';
+import NewsLetter from './NewsLetter';
 
 const styles = {
     avatarBox:{
@@ -46,6 +47,7 @@ export default function News() {
            </Typography>
            <Button sx={styles.readMore}>Read More</Button><br/>
            <img src="https://picsum.photos/400/150?grayscale" alt="news" />
+           <NewsLetter/>
           </Grid>
         </Grid>
     )

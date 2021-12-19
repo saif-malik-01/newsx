@@ -4,7 +4,7 @@ import HomeCom from '../components/Home';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>NewsX</title>
         <meta name="description" content="A light weight news web app" />
@@ -18,6 +18,6 @@ export default function Home() {
       <footer>
        
       </footer>
-    </div>
+    </>
   )
 }

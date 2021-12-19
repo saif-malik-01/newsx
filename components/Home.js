@@ -8,14 +8,14 @@ import Highlights from "./Highlights";
 export default function Home() {
   return (
     <Grid container sx={{ p: 2 }}>
-      <Grid item xs={1}>
+      <Grid item xs={false} md={1}>
         <Sidebar />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <Navbar />
         <News />
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={12} md={5}>
         <Highlights />
       </Grid>
     </Grid>
