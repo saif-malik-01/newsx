@@ -5,9 +5,18 @@ const styles = {
     input:{
         '& > div':{
             borderRadius:'0px',
+            backgroundColor:'#f5f5f5'
         },
-        width:'60%',
+        width:'70%',
         borderRadius:'0px',
+    },
+    btn:{
+        borderRadius:'0px',
+        backgroundColor:'#E52D2D',
+        height:'40px',
+        '&:hover':{
+            backgroundColor:'black',
+        }
     }
 }
 
@@ -16,10 +25,10 @@ const styles = {
 const NewsLetter = () => {
     return (
         <div>
-            <Typography>Subscribe Our Newsletter</Typography>
+            <Typography sx={{my:1}} variant="subtitle1">Subscribe Our Newsletter</Typography>
             <div>
-               <TextField sx={styles.input} size="small" placeholder="Enter Email Address" />
-               <Button sx={{borderRadius:'0px',backgroundColor:'#E52D2D',height:'40px'}} variant="contained">Subscribe</Button>
+               <TextField sx={styles.input} color="error" size="small" placeholder="Enter Email Address" />
+               <Button sx={styles.btn} variant="contained">Subscribe</Button>
             </div>
         </div>
     )

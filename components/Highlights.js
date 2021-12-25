@@ -7,11 +7,11 @@ const styles = {
         my:1
     },
     readMore:{
-        borderBottom:'solid 1px black',
         borderRadius:0,
         color:'black',
-        fontWeight:'2px',
-        mb:1
+        fontWeight:'bold',
+        mb:1,
+        color:'white'
     }
 }
 
@@ -24,7 +24,7 @@ export default function Highlights() {
                 <Box sx={{ flexGrow: 1 }} />
                 <Avatar  src="./" alt="ss" />
             </Toolbar> 
-            <Box sx={{px:6}}>
+            <Box sx={{px:6,mt:2}}>
              <Typography variant="caption">
              6 Min Read | 2 May 2021
              </Typography> 
@@ -38,10 +38,9 @@ export default function Highlights() {
              <Button sx={styles.readMore}>Read More</Button>
             </Box>
          </Grid>
-         <Grid item container>
-           <Grid item xs={12}>
-           <img src="https://picsum.photos/600/200?grayscale" alt="news" style={{width:'100%'}} />
-           </Grid>
+         <Grid item sx={{mt:1}}>
+           <img src="https://picsum.photos/400/200?grayscale" alt="news" style={{width:'63%',height:'200px'}} />
+           <img src="https://picsum.photos/150/200?grayscale" alt="news" style={{width:'35%',marginLeft:'8px',height:'200px'}} />
          </Grid>
         </Grid>
     )

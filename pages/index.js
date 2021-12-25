@@ -14,10 +14,6 @@ export default function Home() {
       <main>
         <HomeCom/>
       </main>
-
-      <footer>
-       
-      </footer>
     </>
   )
 }

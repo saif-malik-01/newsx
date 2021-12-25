@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Paper, IconButton } from "@mui/material";
+import { Paper, IconButton,useMediaQuery } from "@mui/material";
 
 const styles = {
   logo: {
@@ -14,15 +14,27 @@ const styles = {
       display:'flex',
       flexDirection:'column',
       justifyContent:'space-between',
-      alignItems:'center',
+  },
+  toggle:{
+    justifyContent:'start'
+  },
+  mobile:{
+    root:{
+      display:'flex',
+      justifyContent:'space-between',
+      width:'100%'
+    },
   }
 };
 
 export default function Sidebae() {
+
+  const divQuery = useMediaQuery('(max-width:780px)')
+
   return (
-    <div style={styles.root}>
+    <div style={divQuery ? styles.mobile.root : styles.root}>
         <Paper sx={styles.logo}>NX</Paper>
-        <IconButton>F</IconButton>
+        <IconButton sx={styles.toggle}>F</IconButton>
     </div>
   );
 }
