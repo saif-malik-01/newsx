@@ -26,7 +26,8 @@ const styles = {
         p:1,
         backgroundColor:'black',
         color:'white',
-        margin:'4px 5px'
+        margin:'4px 5px',
+        transition:'200ms'
     }
 }
 
@@ -39,9 +40,11 @@ export default function News() {
     React.useEffect(()=>{
         const ele = document.getElementById('news-heading');
         function handleScroll(){
-            if(ele.getBoundingClientRect().top <= 0){
+            if(window.pageYOffset > ele.offsetTop){
                 setIsSticky(true);
-            }else setIsSticky(false); 
+            }else {
+                setIsSticky(false);
+            } 
         }
         window.addEventListener('scroll',handleScroll);
         return ()=> window.removeEventListener('scroll',handleScroll);
