@@ -1,5 +1,6 @@
 import React from "react";
 import { Paper, IconButton,useMediaQuery } from "@mui/material";
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 
 const styles = {
   logo: {
@@ -16,7 +17,9 @@ const styles = {
       justifyContent:'space-between',
   },
   toggle:{
-    justifyContent:'start'
+    justifyContent:'start',
+    width:'40px',
+    color:'black'
   },
   mobile:{
     root:{
@@ -34,7 +37,7 @@ export default function Sidebae() {
   return (
     <div style={divQuery ? styles.mobile.root : styles.root}>
         <Paper sx={styles.logo}>NX</Paper>
-        <IconButton sx={styles.toggle}>F</IconButton>
+        <IconButton sx={styles.toggle}><MenuRoundedIcon/></IconButton>
     </div>
   );
 }
