@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import HomeCom from '../components/Home';
+import HomeCom from '../components/home';
 
 
 export default function Home() {

@@ -38,6 +38,7 @@ export default function News() {
     const isSm = useMediaQuery('(max-width:375px)')
 
     React.useEffect(()=>{
+        if(!isSm) return
         const ele = document.getElementById('news-heading');
         function handleScroll(){
             if(window.pageYOffset > ele.offsetTop){
