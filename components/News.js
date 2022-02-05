@@ -17,7 +17,8 @@ const styles = {
         borderRadius:0,
         color:'black',
         fontWeight:'bold',
-        mb:1
+        mb:1,
+        ml:'-8px',
     },
     stickyHeading:{
         position:'fixed',

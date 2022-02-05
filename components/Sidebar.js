@@ -1,6 +1,7 @@
 import React from "react";
-import { Paper, IconButton,useMediaQuery } from "@mui/material";
+import { Paper, IconButton,useMediaQuery,Drawer } from "@mui/material";
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import NavList from './NavList';
 
 const styles = {
   logo: {
@@ -32,12 +33,21 @@ const styles = {
 
 export default function Sidebae() {
 
-  const divQuery = useMediaQuery('(max-width:780px)')
+  const [openDrawer, setOpenDrawer] = React.useState(false);
+  const isSmall = useMediaQuery('(max-width:780px)')
 
   return (
-    <div style={divQuery ? styles.mobile.root : styles.root}>
+    <nav style={isSmall ? styles.mobile.root : styles.root}>
         <Paper sx={styles.logo}>NX</Paper>
-        <IconButton sx={styles.toggle}><MenuRoundedIcon/></IconButton>
-    </div>
+        { isSmall && <IconButton sx={styles.toggle} onClick={()=>setOpenDrawer(true)}>
+          <MenuRoundedIcon/>
+        </IconButton> }
+        <Drawer
+          open={openDrawer}
+          onClose={()=>setOpenDrawer(false)}
+          >
+          <NavList/>
+        </Drawer>
+    </nav>
   );
 }

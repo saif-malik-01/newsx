@@ -20,8 +20,8 @@ export default function Navbar() {
             <Toolbar>
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={styles.linksBox}>
-            <a>Blogs</a>
             <a>News</a>
+            <a>About</a>
             <a>Contact</a>
             </Box>
             </Toolbar>
